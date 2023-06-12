@@ -6,6 +6,14 @@ from dotenv import load_dotenv
 from openai_helper import OpenAIHelper, default_max_tokens
 from telegram_bot import ChatGPTTelegramBot
 
+import openai
+
+openai.organization = "org-FOD4zVh78xXEQez6jSzAIJX4"
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+openai.Model.list()
+
 
 def main():
     # Read .env file
